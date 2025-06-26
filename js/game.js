@@ -662,9 +662,9 @@ window.onload = function(){
 						startPlayback();
 					}else{
 
-						document.getElementById("replay_text").style.display = "none";
-						iHeartYou();
-						STAGE = 4;
+						// document.getElementById("replay_text").style.display = "none";
+						// iHeartYou();
+						// STAGE = 4;
 
 					}
 				}
@@ -797,25 +797,25 @@ function encryptString(string){
 	}
 	return result;
 }
-function decryptString(string){
-	return encryptString(string); // it's XOR, duh
-}
+// function decryptString(string){
+// 	return encryptString(string); // it's XOR, duh
+// }
 
-var yourMessage = document.getElementById("your_message");
-var yourLink = document.getElementById("your_link");
-function linkChangey(){
-	if(yourMessage.value==""){
-		yourLink.value = "http://ncase.me/door/";
-	}else{
-		yourLink.value = "http://ncase.me/door/#"+encodeURIComponent(encryptString(yourMessage.value));
-	}
-};
-yourMessage.onchange = linkChangey;
-yourMessage.oninput = linkChangey;
-linkChangey();
-yourLink.onclick = function(){
-	yourLink.select();
-};
+// var yourMessage = document.getElementById("your_message");
+// var yourLink = document.getElementById("your_link");
+// function linkChangey(){
+// 	if(yourMessage.value==""){
+// 		yourLink.value = "http://ncase.me/door/";
+// 	}else{
+// 		yourLink.value = "http://ncase.me/door/#"+encodeURIComponent(encryptString(yourMessage.value));
+// 	}
+// };
+// yourMessage.onchange = linkChangey;
+// yourMessage.oninput = linkChangey;
+// linkChangey();
+// yourLink.onclick = function(){
+// 	yourLink.select();
+// };
 
 function socialShare(event,type){
 
